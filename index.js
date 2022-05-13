@@ -31,12 +31,13 @@ class App {
 
         this.ctx.lineWidth = 10
         this.ctx.strokeStyle = 'pink'
-        this.ctx.beginPath() 
 
+        this.ctx.beginPath() 
         this.ctx.moveTo(0, this.canvas.height/2)
         this.ctx.lineTo(this.stageWidth, this.stageWidth*this.beta/360)
         this.ctx.stroke()
 
+        this.ctx.beginPath() 
         this.ctx.moveTo(0, 0);
         this.ctx.lineTo(100, 100);
         this.ctx.stroke()
