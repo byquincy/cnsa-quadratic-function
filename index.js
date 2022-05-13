@@ -29,6 +29,9 @@ class App {
         this.beta = event.beta
         document.getElementById("bb").textContent = Math.round(this.beta)
 
+        this.ctx.lineWidth = 10
+        this.ctx.strokeStyle = 'pink'
+        this.ctx.beginPath() 
         this.ctx.moveTo(0, this.canvas.height/2);
         this.ctx.lineTo(this.stageWidth, this.stageWidth*this.beta/360);
         this.ctx.stroke();
