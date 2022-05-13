@@ -28,6 +28,10 @@ class App {
     handleOrientation(event) {
         this.beta = event.beta
         document.getElementById("bb").textContent = Math.round(this.beta)
+
+        this.ctx.moveTo(0, this.canvas.height/2);
+        this.ctx.lineTo(this.stageWidth, this.stageWidth*this.beta/360);
+        this.ctx.stroke();
     }
 
     animate(t) {
