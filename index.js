@@ -27,8 +27,12 @@ class App {
 
     handleOrientation(event) {
         this.alpha = event.alpha
+        this.beta = event.beta
+        this.gamma = event.gamma
 
-        document.getElementById("aa").textContent=this.alpha
+        document.getElementById("aa").textContent = Math.round(this.alpha)
+        document.getElementById("bb").textContent = Math.round(this.beta)
+        document.getElementById("cc").textContent = Math.round(this.gamma)
     }
 
     animate(t) {
