@@ -16,6 +16,10 @@ export class Handle {
 
     updateAngle(event) {
         this.beta = event.beta
+        
+        document.getElementById('ddd').innerText = event.alpha
+        document.getElementById('eee').innerText = event.gamma
+        document.getElementById('container').style.opacity = String(event.alpha) + '%'
 
         this.reDraw()
     }
