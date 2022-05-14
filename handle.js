@@ -1,7 +1,7 @@
 import { DrawFunc } from "./drawFunc.js";
 
 export class Handle {
-    constructor() {
+    constructor(ctx) {
         this.drawFunc = new DrawFunc()
 
         this.beta = 0
@@ -18,8 +18,6 @@ export class Handle {
     resize(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
-
-        this.reDraw()
     }
 
     reDraw(ctx) {
