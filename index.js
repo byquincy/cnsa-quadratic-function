@@ -32,8 +32,11 @@ class App {
     }
 
     animate(t) {
+        // console.log(t)
+
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
+        // this.handle.beta = t / 100
         this.handle.reDraw(this.ctx);
 
         requestAnimationFrame(this.animate.bind(this));
