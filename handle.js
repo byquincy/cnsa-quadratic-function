@@ -7,9 +7,6 @@ export class Handle {
         this.beta = 0
 
         // this.ctx = ctx
-
-        this.canvasWidth = 0
-        this.canvasHeight = 0
     }
 
     updateAngle(event) {
