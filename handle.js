@@ -90,6 +90,11 @@ export class Handle {
         console.log(this.beta)
 
         let reverseNumber = false
+
+        if(this.beta > 90){
+            this.beta = 180 - this.beta
+        }
+
         if(this.beta < 0){
             this.beta = -1*this.beta
             reverseNumber = true
