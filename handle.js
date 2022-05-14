@@ -30,8 +30,6 @@ export class Handle {
             this.frontNotice = true
         }
 
-        console.log(this.gamma)
-
         if(!this.noticeView()){
             this.reDraw()
         }
@@ -55,6 +53,7 @@ export class Handle {
         }
 
         if(!this.noticeView()){
+            this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
             this.reDraw()
         }
     }
