@@ -93,6 +93,8 @@ export class Handle {
             reverseNumber = true
         }
 
+        console.log(this.beta)
+
         if(0 <= this.beta && this.beta <= 30){
             startX = Math.tan(this.beta * Math.PI/180) - 2/3*root3
             endX = Math.tan(this.beta * Math.PI/180) + 2/3*root3
@@ -107,9 +109,6 @@ export class Handle {
             startX = -1*endX
             endX = -1*temp
         }
-
-        console.log(startX)
-        console.log(endX)
 
         // 물 그리기
         this.ctx.beginPath()
