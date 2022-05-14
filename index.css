@@ -50,18 +50,44 @@ canvas{
     justify-content: center;
 }
 
+#computerNoticeContain{
+    display: none;
+
+    font-size: min(4vh, 10vw);;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+#frontContain{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
 #rotateContain{
     display: flex;
     flex-direction: column;
 
     justify-content: center;
 }
-#rotateGIF{
+
+#icoGIF{
     height: auto;
-    width: 20vh;
+    width: min(20vh, 50vw);
 }
-#rotateText{
+#icoText{
     color: white;
-    font-size: 2vh;
+    font-size: min(2vh, 5vw);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#logo{
+    position: absolute;
+    z-index: 999;
+
+    padding: 1%;
+
+    color: white;
+    font-size: min(2vh, 5vw);
     font-family: 'Noto Sans KR', sans-serif;
 }

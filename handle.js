@@ -1,39 +1,86 @@
-import { DrawFunc } from "./drawFunc.js";
+import { DrawFunc } from "./drawFunc.js"
 
 export class Handle {
-    constructor(ctx) {
+    constructor(ctx){
         this.ctx = ctx
 
         this.drawFunc = new DrawFunc(this.ctx)
 
         this.beta = 0
+        this.gamma = 0
 
         this.canvasWidth = 0
         this.canvasHeight = 0
-
-        // this.ctx = ctx
-    }
-
-    updateAngle(event) {
-        this.beta = event.beta
         
-        document.getElementById('ddd').innerText = event.alpha
-        document.getElementById('eee').innerText = event.gamma
-        document.getElementById('container').style.opacity = String(event.alpha) + '%'
-
-        this.reDraw()
+        this.frontNotice = true
+        this.rotateNotice = true
     }
 
-    resize(canvasWidth, canvasHeight) {
+    updateAngle(event){
+        this.beta = event.beta
+        this.gamma = event.gamma
+
+        if(this.gamma < 0){
+            this.gamma = -1*this.gamma
+        }
+
+        if(this.gamma > 60){
+            this.frontNotice = true
+        }else{
+            this.frontNotice = false
+        }
+
+        if(!this.noticeView()){
+            this.reDraw()
+        }
+    }
+
+    resize(canvasWidth, canvasHeight){
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
-        
-        this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
 
-        this.reDraw()
+        if(true){ // computerNotice
+            document.getElementById('iconContain').style.display= 'none'
+            document.getElementById('computerNoticeContain').style.display= 'grid'
+            document.getElementById('container').style.opacity= '0%'
+
+            this.reDraw()
+            
+            return
+        }
+
+        if(this.canvasWidth <= this.canvasHeight){
+            this.rotateNotice = true
+        }else{
+            this.rotateNotice = false
+        }
+
+        if(!this.noticeView()){
+            this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
+            this.reDraw()
+        }
     }
 
-    reDraw() {
+    noticeView(){
+        if(this.rotateNotice || this.frontNotice){
+            if(this.rotateNotice){
+                document.getElementById('rotateContain').style.display= 'flex'
+                document.getElementById('frontContain').style.display = 'none'
+            }else{  // else면 this.rotateNotice == true
+                document.getElementById('rotateContain').style.display = 'none'
+                document.getElementById('frontContain').style.display = 'flex'
+            }
+
+            document.getElementById('container').style.opacity = '100%'
+            return true
+        }else{
+            document.getElementById('container').style.opacity = '0%'
+
+            return false
+        }
+    }
+
+    reDraw(){
         // 캔버스 초기화
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
@@ -49,8 +96,6 @@ export class Handle {
             reverseNumber = true
         }
 
-        console.log(this.beta)
-
         if(0 <= this.beta && this.beta <= 30){
             startX = Math.tan(this.beta * Math.PI/180) - 2/3*root3
             endX = Math.tan(this.beta * Math.PI/180) + 2/3*root3
@@ -65,9 +110,6 @@ export class Handle {
             startX = -1*endX
             endX = -1*temp
         }
-
-        console.log(startX)
-        console.log(endX)
 
         // 물 그리기
         this.ctx.beginPath()
