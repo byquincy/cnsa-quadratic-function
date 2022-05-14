@@ -24,7 +24,7 @@ export class Handle {
             this.gamma = -1*this.gamma
         }
 
-        if(this.gamma > 60){
+        if(this.gamma > 45){
             this.frontNotice = false
         }else{
             this.frontNotice = true
