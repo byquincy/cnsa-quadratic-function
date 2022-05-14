@@ -23,6 +23,8 @@ class App {
         this.ctx.scale(2, 2)
 
         this.handle.resize(this.stageWidth, this.stageHeight)
+
+        console.log("a")
     }
 }
 
