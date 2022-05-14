@@ -119,7 +119,7 @@ export class Handle {
 
         // 2차함수 그리기
         this.ctx.beginPath()
-        this.ctx.strokeStyle = 'rgb(100, 100, 255)'
+        this.ctx.strokeStyle = 'black'
         this.ctx.lineWidth = 3
 
         this.drawFunc.quadraticFunc(-1*root3, root3)
