@@ -11,22 +11,21 @@ export class Handle {
         this.canvasHeight = 0
     }
 
-    updateDraw(event) {
+    updateAngle(event) {
         this.beta = event.beta
-
-        // this.resize(this.canvasWidth, this.canvasHeight)
-
-        // this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, 0)
-        // this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, this.beta)
-
-
         document.getElementById("wow").textContent = this.beta
+
+        this.reDrawing()
     }
 
     resize(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
 
-        document.getElementById("wow2").textContent = this.beta
+        this.reDrawing()
+    }
+
+    reDrawing() {
+        this.drawFunc.linearFunc(this.ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
 }
