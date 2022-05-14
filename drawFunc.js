@@ -37,7 +37,6 @@ export class DrawFunc{
         )
 
         while(i < endX){
-            console.log(i)
             this.ctx.lineTo(
                 this.getPoint.recoordinateX(i), 
                 this.getPoint.recoordinateY(this.getPoint.getQuadratic(i))

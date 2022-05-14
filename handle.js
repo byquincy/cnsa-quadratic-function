@@ -25,9 +25,9 @@ export class Handle {
         }
 
         if(this.gamma > 60){
-            this.frontNotice = true
-        }else{
             this.frontNotice = false
+        }else{
+            this.frontNotice = true
         }
 
         if(!this.noticeView()){

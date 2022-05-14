@@ -42,6 +42,8 @@ canvas{
     height: 100%;
 
     background-color: black;
+
+    transition: all 0.3s;
 }
 #container-inner{
     display: flex;
@@ -79,13 +81,13 @@ canvas{
 }
 
 #frontContain{
-    display: flex;
+    display: none;
     flex-direction: column;
 
     justify-content: center;
 }
 #rotateContain{
-    display: flex;
+    display: none;
     flex-direction: column;
 
     justify-content: center;
