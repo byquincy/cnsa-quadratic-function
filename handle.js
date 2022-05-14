@@ -6,7 +6,7 @@ export class Handle {
 
         this.beta = 0
 
-        this.ctx = ctx
+        // this.ctx = ctx
 
         this.canvasWidth = 0
         this.canvasHeight = 0
@@ -16,8 +16,8 @@ export class Handle {
         this.beta = event.beta
         // document.getElementById("wow").textContent = this.beta
         document.getElementById("wow").textContent = event.beta
-        
-        this.printBeta()
+
+        this.handle.reDraw(2)
         // this.reDraw(this.ctx)
     }
 
