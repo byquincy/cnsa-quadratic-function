@@ -32,7 +32,7 @@ class App {
     }
 
     animate(t) {
-        if(console % 50 == true){
+        if(t % 50 == true){
             console.log(t)
         }
 
