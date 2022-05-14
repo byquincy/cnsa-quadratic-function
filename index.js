@@ -6,7 +6,7 @@ class App {
         this.ctx = this.canvas.getContext('2d');
         document.body.appendChild(this.canvas);
 
-        this.handle = new Handle(this.ctx), 
+        this.handle = new Handle(), 
 
         window.addEventListener('resize', this.resize.bind(this), false)
         window.addEventListener("deviceorientation", this.handle.updateAngle)

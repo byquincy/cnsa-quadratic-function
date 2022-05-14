@@ -1,8 +1,7 @@
 import { DrawFunc } from "./drawFunc.js";
 
 export class Handle {
-    constructor(ctx) {
-        this.ctx = ctx
+    constructor() {
         this.drawFunc = new DrawFunc()
 
         this.beta = 0
@@ -23,7 +22,7 @@ export class Handle {
         this.reDraw()
     }
 
-    reDraw() {
+    reDraw(ctx) {
         this.drawFunc.linearFunc(this.ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
 }
