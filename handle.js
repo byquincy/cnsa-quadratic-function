@@ -12,7 +12,7 @@ export class Handle {
 
     updateAngle(event) {
         this.beta = event.beta
-        document.getElementById("wow").textContent = this.beta
+        // document.getElementById("wow").textContent = this.beta
     }
 
     resize(canvasWidth, canvasHeight) {
@@ -21,6 +21,8 @@ export class Handle {
     }
 
     reDraw(ctx) {
+        document.getElementById("wow").textContent = this.beta
+        
         this.drawFunc.linearFunc(ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
 }
