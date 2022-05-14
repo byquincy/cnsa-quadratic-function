@@ -23,6 +23,6 @@ export class Handle {
     }
 
     reDraw(ctx) {
-        this.drawFunc.linearFunc(this.ctx, this.canvasWidth, this.canvasHeight, this.beta)
+        this.drawFunc.linearFunc(ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
 }
