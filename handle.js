@@ -6,6 +6,9 @@ export class Handle {
 
         this.beta = 0
 
+        this.canvasWidth = 0
+        this.canvasHeight = 0
+
         // this.ctx = ctx
     }
 
@@ -13,24 +16,21 @@ export class Handle {
         this.beta = event.beta
         // document.getElementById("wow").textContent = this.beta
         document.getElementById("wow").textContent = event.beta
-
-        // this.handle.reDraw(2)
-        // this.reDraw(this.ctx)
+        this.reDraw.bind(this)
     }
 
     resize(canvasWidth, canvasHeight) {
-        document.getElementById("wow2").textContent = this.canvasHeight
-        // this.canvasWidth = canvasWidth
-        // this.canvasHeight = canvasHeight
+        document.getElementById("wow2").textContent = canvasHeight
+
+        this.canvasWidth = canvasWidth
+        this.canvasHeight = canvasHeight
+
+        this.reDraw.bind(this)
     }
 
-    reDraw(ctx) {
+    reDraw() {
         document.getElementById("wow2").textContent = this.beta
 
         // this.drawFunc.linearFunc(ctx, this.canvasWidth, this.canvasHeight, this.beta)
-    }
-
-    printBeta() {
-        document.getElementById("wow2").textContent = this.beta
     }
 }
