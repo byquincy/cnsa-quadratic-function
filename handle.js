@@ -19,7 +19,7 @@ export class Handle {
     updateAngle(event){
         this.beta = event.beta
         this.gamma = event.gamma
-
+        
         if(this.gamma < 0){
             this.gamma = -1*this.gamma
         }
@@ -40,11 +40,8 @@ export class Handle {
         this.canvasHeight = canvasHeight
 
         if(!this.isMobile()){ // computerNotice
-            document.getElementById('iconContain').style.display= 'none'
-            document.getElementById('computerNoticeContain').style.display= 'grid'
-            document.getElementById('container').style.opacity= '20%'
-
-            this.reDraw()
+            document.getElementById('iconContain').style.display = 'none'
+            document.getElementById('computerNoticeContain').style.display = 'flex'
 
             return
         }

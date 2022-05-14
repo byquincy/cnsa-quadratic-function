@@ -33,7 +33,7 @@ canvas{
 
 #container{
     position: absolute;
-    z-index: 0;
+    z-index: 1;
 
     display: flex;
     justify-content: center;
@@ -49,13 +49,33 @@ canvas{
 
     justify-content: center;
 }
+#background{
+    position: absolute;
+    z-index: 0;
 
-#computerNoticeContain{
+    height: 100vh;
+    width: 100vw;
+
     display: none;
 
-    font-size: min(4vh, 10vw);;
+    background-color: black;
+    opacity: 50%;
+}
+
+#computerNoticeContain{
+    display: none;  /* 실행 되면 flex로 변경됨. */
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: min(6vh, 15vw);
     font-family: 'Noto Sans KR', sans-serif;
+    line-height: min(7vh, 17.5vw);
     color: white;
+}
+#qr-code{
+    height: min(20vh, 50vw);
+
+    padding-right: min(2vh, 5vw);
 }
 
 #frontContain{
