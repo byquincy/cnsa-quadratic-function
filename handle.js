@@ -12,7 +12,8 @@ export class Handle {
 
     updateAngle(event) {
         this.beta = event.beta
-        document.getElementById("wow").textContent = this.beta
+        // document.getElementById("wow").textContent = this.beta
+        document.getElementById("wow").textContent = event.beta
     }
 
     resize(canvasWidth, canvasHeight) {
