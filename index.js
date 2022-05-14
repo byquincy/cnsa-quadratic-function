@@ -9,7 +9,8 @@ class App {
         this.handle = new Handle(this.ctx)
 
         window.addEventListener('resize', this.resize.bind(this), false)
-        window.addEventListener("deviceorientation", this.handle.updateAngle)
+        console.log(this.handle)
+        window.addEventListener("deviceorientation", this.handle.updateAngle.bind(this))
 
         this.resize()
     }

@@ -19,8 +19,8 @@ export class Handle {
 
         document.getElementById("wow").textContent = this.beta
 
-        console.log(this)
-        console.log(this.handle)
+        // console.log(this)
+        // console.log(this.handle)
         this.reDraw()
     }
 
