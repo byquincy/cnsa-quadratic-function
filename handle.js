@@ -12,8 +12,8 @@ export class Handle {
         this.canvasWidth = 0
         this.canvasHeight = 0
         
-        this.frontNotice = true
-        this.rotateNotice = true
+        this.frontNotice = false
+        this.rotateNotice = false
     }
 
     updateAngle(event){
@@ -55,7 +55,7 @@ export class Handle {
         if(!this.noticeView()){
             this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
             console.log("b")
-            
+
             this.reDraw()
         }
     }
