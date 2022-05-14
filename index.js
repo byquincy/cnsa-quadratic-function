@@ -13,7 +13,7 @@ class App {
 
         this.resize()
 
-        requestAnimationFrame(this.animate.bind(this));
+        // requestAnimationFrame(this.animate.bind(this));
         // this.handle.updateDraw("d")
     }
 
