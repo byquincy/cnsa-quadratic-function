@@ -91,13 +91,12 @@ export class Handle {
 
         let reverseNumber = false
 
-        if(this.beta > 90){
-            this.beta = 180 - this.beta
-        }
-
         if(this.beta < 0){
             this.beta = -1*this.beta
             reverseNumber = true
+        }
+        if(this.beta > 90){
+            this.beta = 180 - this.beta
         }
 
         if(0 <= this.beta && this.beta <= 30){
