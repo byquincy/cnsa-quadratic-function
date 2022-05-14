@@ -16,7 +16,7 @@ export class Handle {
 
         // this.resize(this.canvasWidth, this.canvasHeight)
 
-        this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, 0)
+        // this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, 0)
         this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, this.beta)
 
 
