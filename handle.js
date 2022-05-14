@@ -19,8 +19,6 @@ export class Handle {
 
         document.getElementById("wow").textContent = this.beta
 
-        // console.log(this)
-        // console.log(this.handle)
         this.reDraw()
     }
 
@@ -32,7 +30,7 @@ export class Handle {
     }
 
     reDraw() {
-        // document.getElementById("wow2").textContent = this.beta
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
         this.drawFunc.linearFunc(this.ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
