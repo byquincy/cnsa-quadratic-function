@@ -39,13 +39,13 @@ export class Handle {
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
 
-        if(true){ // computerNotice
+        if(!this.isMobile()){ // computerNotice
             document.getElementById('iconContain').style.display= 'none'
             document.getElementById('computerNoticeContain').style.display= 'grid'
-            document.getElementById('container').style.opacity= '0%'
+            document.getElementById('container').style.opacity= '20%'
 
             this.reDraw()
-            
+
             return
         }
 
@@ -127,4 +127,16 @@ export class Handle {
         this.ctx.stroke()
         this.ctx.closePath()
     }
+
+    isMobile(){
+        var UserAgent = navigator.userAgent;
+    
+        if(UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
 }
