@@ -32,7 +32,9 @@ class App {
     }
 
     animate(t) {
-        // console.log(t)
+        if(console % 50 == true){
+            console.log(t)
+        }
 
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
