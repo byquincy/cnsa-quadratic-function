@@ -29,7 +29,7 @@ export class DrawFunc{
             distance = 0.1
         }
         const DISTANCE = distance
-
+        
         // 그리기 시작
         this.ctx.moveTo(
             this.getPoint.recoordinateX(startX), 
