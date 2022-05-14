@@ -14,18 +14,20 @@ export class Handle {
 
     updateAngle(event) {
         this.beta = event.beta
-        // document.getElementById("wow").textContent = this.beta
-        document.getElementById("wow").textContent = event.beta
-        this.reDraw.bind(this)
+
+        document.getElementById("wow").textContent = this.beta
+
+        console.log(this)
+        this.reDraw()
     }
 
     resize(canvasWidth, canvasHeight) {
-        document.getElementById("wow2").textContent = canvasHeight
+        // document.getElementById("wow2").textContent = canvasHeight
 
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
 
-        this.reDraw.bind(this)
+        this.reDraw()
     }
 
     reDraw() {
