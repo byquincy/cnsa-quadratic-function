@@ -21,7 +21,7 @@ export class Handle {
 
         this.resize(this.canvasWidth, this.canvasHeight)
 
-        // document.getElementById("wow").textContent = this.beta
+        document.getElementById("wow").textContent = this.beta
     }
 
     resize(canvasWidth, canvasHeight) {
@@ -30,6 +30,6 @@ export class Handle {
 
         this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, this.beta)
 
-        document.getElementById("wow").textContent = this.beta
+        document.getElementById("wow2").textContent = this.beta
     }
 }
