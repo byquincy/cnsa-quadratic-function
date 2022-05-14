@@ -87,13 +87,13 @@ export class Handle {
 
         const root3 = 1.73
 
+        console.log(this.beta)
+
         let reverseNumber = false
         if(this.beta < 0){
             this.beta = -1*this.beta
             reverseNumber = true
         }
-
-        console.log(this.beta)
 
         if(0 <= this.beta && this.beta <= 30){
             startX = Math.tan(this.beta * Math.PI/180) - 2/3*root3
