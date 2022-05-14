@@ -30,6 +30,8 @@ export class Handle {
             this.frontNotice = true
         }
 
+        console.log(this.gamma)
+
         if(!this.noticeView()){
             this.reDraw()
         }
@@ -59,6 +61,7 @@ export class Handle {
     }
 
     noticeView(){
+        console.log(this.rotateNotice)
         if(this.rotateNotice || this.frontNotice){
             if(this.rotateNotice){
                 document.getElementById('rotateContain').style.display= 'flex'
@@ -72,7 +75,6 @@ export class Handle {
             return true
         }else{
             document.getElementById('container').style.opacity = '0%'
-
             return false
         }
     }
