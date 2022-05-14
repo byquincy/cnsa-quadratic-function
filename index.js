@@ -2,9 +2,9 @@ import { Handle } from "./handle.js";
 
 class App {
     constructor() {
-        this.canvas = document.createElement('canvas');
-        this.ctx = this.canvas.getContext('2d');
-        document.body.appendChild(this.canvas);
+        this.canvas = document.createElement('canvas')
+        this.ctx = this.canvas.getContext('2d')
+        document.body.appendChild(this.canvas)
 
         this.handle = new Handle(this.ctx)
 
@@ -26,7 +26,7 @@ class App {
 
         this.canvas.width = this.stageWidth * 2
         this.canvas.height = this.stageHeight * 2
-        this.ctx.scale(2, 2);
+        this.ctx.scale(2, 2)
 
         this.handle.resize(this.stageWidth, this.stageHeight)
     }
@@ -40,9 +40,9 @@ class App {
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
 
         // this.handle.beta = t / 100
-        this.handle.reDraw(this.ctx);
+        this.handle.reDraw(this.ctx)
 
-        requestAnimationFrame(this.animate.bind(this));
+        requestAnimationFrame(this.animate.bind(this))
     }
 }
 

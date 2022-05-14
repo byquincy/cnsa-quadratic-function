@@ -16,8 +16,9 @@ export class Handle {
         this.beta = event.beta
         // document.getElementById("wow").textContent = this.beta
         document.getElementById("wow").textContent = event.beta
-
-        reDraw(this.ctx, this)
+        
+        this.printBeta()
+        // this.reDraw(this.ctx)
     }
 
     resize(canvasWidth, canvasHeight) {
@@ -30,8 +31,8 @@ export class Handle {
 
         // this.drawFunc.linearFunc(ctx, this.canvasWidth, this.canvasHeight, this.beta)
     }
-}
 
-function reDraw(ctx, this) {
-    document.getElementById("wow2").textContent = this.beta
+    printBeta() {
+        document.getElementById("wow2").textContent = this.beta
+    }
 }
