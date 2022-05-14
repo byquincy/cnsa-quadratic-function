@@ -54,7 +54,5 @@ export class DrawFunc{
 
     resize(canvasWidth, canvasHeight) {
         this.getPoint.resize(canvasWidth, canvasHeight)
-
-        console.log("c")
     }
 }

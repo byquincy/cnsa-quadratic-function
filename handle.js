@@ -54,7 +54,6 @@ export class Handle {
 
         if(!this.noticeView()){
             this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
-            console.log("b")
 
             this.reDraw()
         }
@@ -111,9 +110,8 @@ export class Handle {
 
         // 물 그리기
         this.ctx.beginPath()
-        this.ctx.fillStyle = 'rgba(105, 101, 255, 0.5)'
+        this.ctx.fillStyle = 'rgb(175, 175, 255)'
 
-        this.drawFunc.linearFunc(startX, endX)
         this.drawFunc.quadraticFunc(startX, endX)
 
         this.ctx.fill()
@@ -121,9 +119,11 @@ export class Handle {
 
         // 2차함수 그리기
         this.ctx.beginPath()
+        this.ctx.strokeStyle = 'rgb(100, 100, 255)'
+        this.ctx.lineWidth = 3
+
         this.drawFunc.quadraticFunc(-1*root3, root3)
         this.ctx.stroke()
-        this.ctx.closePath()
     }
 
     isMobile(){
