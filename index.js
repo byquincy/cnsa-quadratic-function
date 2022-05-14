@@ -27,5 +27,6 @@ class App {
 }
 
 window.onload = () => {
+    document.getElementById('body').style.backgroundColor = 'transparent'
     new App()
 }

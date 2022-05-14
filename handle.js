@@ -55,13 +55,11 @@ export class Handle {
         }
 
         if(!this.noticeView()){
-            this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
             this.reDraw()
         }
     }
 
     noticeView(){
-        console.log(this.rotateNotice)
         if(this.rotateNotice || this.frontNotice){
             if(this.rotateNotice){
                 document.getElementById('rotateContain').style.display= 'flex'
@@ -109,6 +107,9 @@ export class Handle {
             startX = -1*endX
             endX = -1*temp
         }
+
+        console.log("startX: " + String(startX))
+        console.log("endX: " + String(endX))
 
         // 물 그리기
         this.ctx.beginPath()
