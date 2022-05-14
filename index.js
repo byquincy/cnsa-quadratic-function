@@ -12,9 +12,6 @@ class App {
         window.addEventListener("deviceorientation", this.handle.updateAngle)
 
         this.resize()
-
-        // requestAnimationFrame(this.animate.bind(this));
-        // this.handle.updateDraw("d")
     }
 
     resize() {
@@ -29,20 +26,6 @@ class App {
         this.ctx.scale(2, 2)
 
         this.handle.resize(this.stageWidth, this.stageHeight)
-    }
-
-    animate(t) {
-        console.log(t)
-        // if(t % 50 == 0){
-        //     console.log(t)
-        // }
-
-        this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
-        // this.handle.beta = t / 100
-        this.handle.reDraw(this.ctx)
-
-        requestAnimationFrame(this.animate.bind(this))
     }
 }
 

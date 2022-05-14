@@ -17,13 +17,14 @@ export class Handle {
         // document.getElementById("wow").textContent = this.beta
         document.getElementById("wow").textContent = event.beta
 
-        this.handle.reDraw(2)
+        // this.handle.reDraw(2)
         // this.reDraw(this.ctx)
     }
 
     resize(canvasWidth, canvasHeight) {
-        this.canvasWidth = canvasWidth
-        this.canvasHeight = canvasHeight
+        document.getElementById("wow2").textContent = this.canvasHeight
+        // this.canvasWidth = canvasWidth
+        // this.canvasHeight = canvasHeight
     }
 
     reDraw(ctx) {
