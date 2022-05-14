@@ -14,7 +14,11 @@ export class Handle {
     updateDraw(event) {
         this.beta = event.beta
 
-        this.resize(this.canvasWidth, this.canvasHeight)
+        // this.resize(this.canvasWidth, this.canvasHeight)
+
+        this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, 0)
+        this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, this.beta)
+
 
         document.getElementById("wow").textContent = this.beta
     }
@@ -22,8 +26,6 @@ export class Handle {
     resize(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
-
-        this.drawFunc.linearFunc(this.ctx, canvasWidth, canvasHeight, this.beta)
 
         document.getElementById("wow2").textContent = this.beta
     }
