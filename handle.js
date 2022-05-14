@@ -18,6 +18,8 @@ export class Handle {
     updateDraw(event) {
         this.beta = event.beta
 
+        document.getElementById("wow").textContent=this.beta
+
         this.resize(this.canvasWidth, this.canvasWidth)
     }
 
