@@ -54,10 +54,10 @@ export class Handle {
 
         if(!this.noticeView()){
             this.drawFunc.resize(this.canvasWidth, this.canvasHeight)
+            console.log("b")
+            
             this.reDraw()
         }
-
-        console.log("b")
     }
 
     noticeView(){
