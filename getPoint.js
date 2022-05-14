@@ -22,6 +22,9 @@ export class GetPoint {
         this.canvasWidth = canvasWidth
         this.canvasHeight = canvasHeight
 
+        console.log(this.canvasWidth)
+        console.log(this.canvasHeight)
+
         this.magnificat = Math.min(this.canvasHeight / 2, this.canvasWidth / 2)
         // 루트3 대신 대충 2
     }
