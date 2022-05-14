@@ -12,6 +12,7 @@ class App {
         window.addEventListener("deviceorientation", this.handle.updateDraw)
 
         this.resize()
+        // this.handle.updateDraw("d")
     }
 
     resize() {
