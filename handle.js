@@ -108,9 +108,6 @@ export class Handle {
             endX = -1*temp
         }
 
-        console.log("startX: " + String(startX))
-        console.log("endX: " + String(endX))
-
         // 물 그리기
         this.ctx.beginPath()
         this.ctx.fillStyle = 'rgba(105, 101, 255, 0.5)'
