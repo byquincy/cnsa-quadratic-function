@@ -86,12 +86,14 @@ canvas{
     flex-direction: column;
 
     justify-content: center;
+    align-content: center;
 }
 #rotateContain{
     display: none;
     flex-direction: column;
 
     justify-content: center;
+    align-content: center;
 }
 
 #icoGIF{
