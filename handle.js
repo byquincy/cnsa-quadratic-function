@@ -85,7 +85,7 @@ export class Handle {
         let startX = 0
         let endX = 0
 
-        const root3 = 1.73
+        const root3 = 1.732
 
         console.log(this.beta)
 
