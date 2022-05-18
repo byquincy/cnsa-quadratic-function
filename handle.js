@@ -116,7 +116,7 @@ export class Handle {
 
         // 물 그리기
         this.ctx.beginPath()
-        this.ctx.fillStyle = 'rgb(175, 175, 255)'
+        this.ctx.fillStyle = '#ACC7B4'
 
         this.drawFunc.quadraticFunc(startX, endX)
 
@@ -125,7 +125,7 @@ export class Handle {
 
         // 2차함수 그리기
         this.ctx.beginPath()
-        this.ctx.strokeStyle = 'black'
+        this.ctx.strokeStyle = '#ACC7B4'
         this.ctx.lineWidth = 3
 
         this.drawFunc.quadraticFunc(-1*root3, root3)
